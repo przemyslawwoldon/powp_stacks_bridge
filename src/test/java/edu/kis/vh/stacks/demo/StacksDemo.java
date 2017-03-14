@@ -34,3 +34,6 @@ class StacksDemo {
 // wciecie linii 19-27;
 // usuniecie pustej linii 11;
 // wciecie linia 12.
+
+//alt+ <--, alt+ -->: sluza do przechodzenia pomiedzy ostatnio uzywanymi plikami 
+//alt+ <-- : dodatkowo mozliwe otwarcie pliku jesli zostal zamkniety
