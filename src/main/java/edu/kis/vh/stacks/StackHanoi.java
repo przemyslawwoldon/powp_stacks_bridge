@@ -14,5 +14,5 @@ public class StackHanoi extends stack {
 		else
 			super.push(in);
 	}
-	
+
 }

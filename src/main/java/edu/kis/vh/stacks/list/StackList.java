@@ -36,5 +36,5 @@ public class StackList {
 		last = last.prev;
 		return ret;
 	}
-	
+
 }
