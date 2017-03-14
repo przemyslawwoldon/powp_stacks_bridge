@@ -4,10 +4,10 @@ public class StackList {
 
 	private static final int EMPTY_STACK_VALUE = -1;
 	
-	Node last;
+	private Node last;
 	//int i;
 
-	public void pushElement(int i) {
+	protected void pushElement(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -17,21 +17,21 @@ public class StackList {
 		}
 	}
 
-	public boolean empty() {
+	private boolean empty() {
 		return last == null;
 	}
 
-	public boolean full() {
+	protected boolean full() {
 		return false;
 	}
 
-	public int peek() {
+	protected int peek() {
 		if (empty())
 			return EMPTY_STACK_VALUE;
 		return last.value;
 	}
 
-	public int pop() {
+	protected int pop() {
 		if (empty())
 			return EMPTY_STACK_VALUE;
 		int ret = last.value;
