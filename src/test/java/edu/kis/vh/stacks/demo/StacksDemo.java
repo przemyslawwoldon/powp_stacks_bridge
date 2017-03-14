@@ -15,6 +15,10 @@ class StacksDemo {
 		Stack[] stacks = { defaultStacksFactory.getStandardStack(), defaultStacksFactory.getFalseStack(),
 				defaultStacksFactory.getFIFOStack(), defaultStacksFactory.getHanoiStack() };
 
+		testStacks(stacks);
+	}
+
+	public static void testStacks(Stack[] stacks) {
 		for (int i = 1; i < SELECT_MAX_VALUE_OF_PUSH_ONE_STACK; i++)
 			for (int j = 0; j < SIZE_HASHSET_OF_STACK; j++)
 				stacks[j].push(i);
