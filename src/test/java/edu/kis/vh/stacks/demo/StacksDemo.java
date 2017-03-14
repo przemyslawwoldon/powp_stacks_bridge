@@ -1,30 +1,34 @@
 package edu.kis.vh.stacks.demo;
 
 import edu.kis.vh.stacks.StackHanoi;
-import edu.kis.vh.stacks.stack;
+import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
 class StacksDemo {
 
-	public static void main(String[] args) {
-		DefaultStacksFactory factory = new DefaultStacksFactory();
-		stack[] stacks = { factory.GetStandardStack(), factory.GetFalseStack(), factory.GetFIFOStack(),
-				factory.GetHanoiStack() };
+	private static final int SELECT_MAX_VALUE_OF_PUSH_ONE_STACK = 15;
+	private static final int SIZE_HASHSET_OF_STACK = 3;
+	private static final int RANDOM_TOP_BORDER = 20;
 
-		for (int i = 1; i < 15; i++)
-			for (int j = 0; j < 3; j++)
+	public static void main(String[] args) {
+		DefaultStacksFactory defaultStacksFactory = new DefaultStacksFactory();
+		Stack[] stacks = { defaultStacksFactory.getStandardStack(), defaultStacksFactory.getFalseStack(),
+				defaultStacksFactory.getFIFOStack(), defaultStacksFactory.getHanoiStack() };
+
+		for (int i = 1; i < SELECT_MAX_VALUE_OF_PUSH_ONE_STACK; i++)
+			for (int j = 0; j < SIZE_HASHSET_OF_STACK; j++)
 				stacks[j].push(i);
 
-		java.util.Random rn = new java.util.Random();
-		for (int i = 1; i < 15; i++)
-			stacks[3].push(rn.nextInt(20));
-
+		java.util.Random random = new java.util.Random();
+		for (int i = 1; i < SELECT_MAX_VALUE_OF_PUSH_ONE_STACK; i++)
+			stacks[SIZE_HASHSET_OF_STACK].push(random.nextInt(RANDOM_TOP_BORDER));
+		
 		for (int i = 0; i < stacks.length; i++) {
 			while (!stacks[i].isEmpty())
 				System.out.print(stacks[i].pop() + "  ");
 			System.out.println();
 		}
-		System.out.println("total rejected is " + ((StackHanoi) stacks[3]).reportRejected());
+		System.out.println("total rejected is " + ((StackHanoi) stacks[SIZE_HASHSET_OF_STACK]).reportRejected());
 	}
 
 }
@@ -35,5 +39,5 @@ class StacksDemo {
 // usuniecie pustej linii 11;
 // wciecie linia 12.
 
-//alt+ <--, alt+ -->: sluza do przechodzenia pomiedzy ostatnio uzywanymi plikami 
-//alt+ <-- : dodatkowo mozliwe otwarcie pliku jesli zostal zamkniety
+// alt+ <--, alt+ -->: sluza do przechodzenia pomiedzy ostatnio uzywanymi plikami
+// alt+ <-- : dodatkowo mozliwe otwarcie pliku jesli zostal zamkniety
