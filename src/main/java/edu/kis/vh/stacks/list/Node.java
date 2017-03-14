@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks.list;
 
-public class Node {
+class Node {
 
 	private final int value;//w miejscu odwolania sie do tego atrybutu pojawila sie metoda
 	private Node prev;//w miejscu odwolania sie do tego atrybutu pojawila sie metoda
