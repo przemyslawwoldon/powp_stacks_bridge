@@ -12,7 +12,7 @@ public class StackListTest {
 		StackList stackList = new StackList();
 		int testValue = 5;
 		stackList.pushElement(testValue);
-		int result = stackList.pop();
+		int result = stackList.peek();
 		
 		Assert.assertEquals(testValue, result);
 	}
