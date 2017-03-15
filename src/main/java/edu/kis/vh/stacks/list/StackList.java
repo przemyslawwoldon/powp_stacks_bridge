@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks.list;
 
-class StackList {
+public class StackList {
 
 	private static final int EMPTY_STACK_VALUE = -1;
 	
@@ -18,7 +18,7 @@ class StackList {
 	private Node last;
 	//int i;
 
-	protected void pushElement(int i) {
+	public void pushElement(int i) {
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -28,21 +28,21 @@ class StackList {
 		}
 	}
 
-	private boolean empty() {
+	public boolean empty() {
 		return last == null;
 	}
 
-	protected boolean full() {
+	public boolean full() {
 		return false;
 	}
 
-	protected int peek() {
+	public int peek() {
 		if (empty())
 			return EMPTY_STACK_VALUE;
 		return last.value;
 	}
 
-	protected int pop() {
+	public int pop() {
 		if (empty())
 			return EMPTY_STACK_VALUE;
 		int ret = last.value;
