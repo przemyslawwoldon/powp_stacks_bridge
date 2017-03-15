@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.StackHanoi;
 import edu.kis.vh.stacks.Stack;
 import edu.kis.vh.stacks.factory.DefaultStacksFactory;
 
-class StacksDemo {
+public class StacksDemo {
 
 	private static final int SELECT_MAX_VALUE_OF_PUSH_ONE_STACK = 15;
 	private static final int SIZE_HASHSET_OF_STACK = 3;
