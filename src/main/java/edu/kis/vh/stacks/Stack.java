@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-import java.util.ArrayList;
+import edu.kis.vh.stacks.list.StackList;
 
 /**
  * @author Przemyslaw
@@ -8,39 +8,39 @@ import java.util.ArrayList;
  */
 public class Stack {
 
-	private StackArray stackArray = new StackArray();
+	private StackList stackList;
 
-	public Stack(StackArray stackArray) {
+	public Stack(StackList stackArray) {
 		super();
-		this.stackArray = stackArray;
+		this.stackList = stackArray;
 	}
 	
 	public Stack() {
-		this.stackArray = new StackArray();
+		this.stackList = new StackList();
 	}
 
 	public void push(int i) {
-		stackArray.push(i);
+		stackList.pushElement(i);
 	}
 
 	public boolean isEmpty() {
-		return stackArray.isEmpty();
+		return stackList.empty();
 	}
 
 	public boolean isFull() {
-		return stackArray.isFull();
+		return stackList.full();
 	}
 
 	public int top() {
-		return stackArray.top();
+		return stackList.peek();
 	}
 
 	public int pop() {
-		return stackArray.pop();
+		return stackList.pop();
 	}
-
+	
 	public int getTotal() {
-		return stackArray.getTotal();
+		return stackList.getI();
 	}
 	
 }

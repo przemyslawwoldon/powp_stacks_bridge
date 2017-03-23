@@ -16,9 +16,10 @@ public class StackList {
 	}	
 	
 	private Node last;
-	//int i;
+	private int i = EMPTY_STACK_VALUE;
 
-	public void pushElement(int i) {
+	public void pushElement (int i) {
+		this.i += 1;
 		if (last == null)
 			last = new Node(i);
 		else {
@@ -45,9 +46,19 @@ public class StackList {
 	public int pop() {
 		if (empty())
 			return EMPTY_STACK_VALUE;
+		this.i -= 1;
 		int ret = last.value;
 		last = last.prev;
 		return ret;
 	}
 
+	public int getI() {
+		return i;
+	}
+
 }
+
+//1.source generate delagate method
+//2.alt + shift + r 
+//generacja metod z klasy StackList
+//nastepnie zamiana ich nazw
