@@ -1,6 +1,8 @@
 package edu.kis.vh.stacks.list;
 
-public class StackList {
+import edu.kis.vh.stacks.StackVector;
+
+public class StackList implements StackVector{
 
 	private static final int EMPTY_STACK_VALUE = -1;
 	
@@ -18,7 +20,8 @@ public class StackList {
 	private Node last;
 	private int i = EMPTY_STACK_VALUE;
 
-	public void pushElement (int i) {
+	@Override
+	public void push (int i) {
 		this.i += 1;
 		if (last == null)
 			last = new Node(i);
@@ -29,22 +32,26 @@ public class StackList {
 		}
 	}
 
-	public boolean empty() {
+	@Override
+	public boolean isEmpty() {
 		return last == null;
 	}
 
-	public boolean full() {
+	@Override
+	public boolean isFull() {
 		return false;
 	}
 
-	public int peek() {
-		if (empty())
+	@Override
+	public int top() {
+		if (isEmpty())
 			return EMPTY_STACK_VALUE;
 		return last.value;
 	}
 
+	@Override
 	public int pop() {
-		if (empty())
+		if (isEmpty())
 			return EMPTY_STACK_VALUE;
 		this.i -= 1;
 		int ret = last.value;
@@ -52,7 +59,8 @@ public class StackList {
 		return ret;
 	}
 
-	public int getI() {
+	@Override
+	public int getTotal() {
 		return i;
 	}
 

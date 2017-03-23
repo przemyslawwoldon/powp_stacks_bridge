@@ -20,19 +20,19 @@ public class Stack {
 	}
 
 	public void push(int i) {
-		stackList.pushElement(i);
+		stackList.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackList.empty();
+		return stackList.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackList.full();
+		return stackList.isFull();
 	}
 
 	public int top() {
-		return stackList.peek();
+		return stackList.top();
 	}
 
 	public int pop() {
@@ -40,7 +40,7 @@ public class Stack {
 	}
 	
 	public int getTotal() {
-		return stackList.getI();
+		return stackList.getTotal();
 	}
 	
 }

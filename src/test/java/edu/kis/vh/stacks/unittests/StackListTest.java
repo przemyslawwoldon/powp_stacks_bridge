@@ -11,8 +11,8 @@ public class StackListTest {
 	public void testPushElement() {
 		StackList stackList = new StackList();
 		int testValue = 5;
-		stackList.pushElement(testValue);
-		int result = stackList.peek();
+		stackList.push(testValue);
+		int result = stackList.top();
 		
 		Assert.assertEquals(testValue, result);
 	}
@@ -20,11 +20,11 @@ public class StackListTest {
 	@Test
 	public void testEmpty() {
 		StackList stackList = new StackList();
-		boolean result = stackList.empty();
+		boolean result = stackList.isEmpty();
 
 		Assert.assertEquals(true, result);
-		stackList.pushElement(888);
-		result = stackList.empty();
+		stackList.push(888);
+		result = stackList.isEmpty();
 
 		Assert.assertEquals(false, result);
 	}
@@ -48,15 +48,15 @@ public class StackListTest {
 	public void testPeek() {
 		StackList stackList = new StackList();
 		final int EMPTY_STACK_VALUE = -1;
-		int result = stackList.peek();
+		int result = stackList.top();
 
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 		int testValue = 4;
-		stackList.pushElement(testValue);
-		result = stackList.peek();
+		stackList.push(testValue);
+		result = stackList.top();
 
 		Assert.assertEquals(testValue, result);
-		result = stackList.peek();
+		result = stackList.top();
 
 		Assert.assertEquals(testValue, result);
 	}
@@ -69,7 +69,7 @@ public class StackListTest {
 
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 		int testValue = 4;
-		stackList.pushElement(testValue);
+		stackList.push(testValue);
 		result = stackList.pop();
 
 		Assert.assertEquals(testValue, result);

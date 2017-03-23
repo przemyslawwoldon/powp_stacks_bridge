@@ -1,6 +1,6 @@
 package edu.kis.vh.stacks;
 
-public class StackArray {
+public class StackArray implements StackVector {
 
 	private static final int EMPTY_STACK_VALUE = -1;
 	private static final int FULL_STACK_VALUE = 12;
@@ -8,55 +8,55 @@ public class StackArray {
 	private final int[] items = new int[FULL_STACK_VALUE];
 	private int total = EMPTY_STACK_VALUE;
 
-	/**
-	 * This method adds new element to stack
-	 * @param i This is an element to be pushed on stack
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.StackVector#push(int)
 	 */
+	@Override
 	public void push(int i) {
 		if (!isFull())
 			items[++total] = i;
 	}
 
-	/**
-	 * This method checks if stack is empty
-	 * @return This returns true if stack is empty else false 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.StackVector#isEmpty()
 	 */
+	@Override
 	public boolean isEmpty() {
 		return total == EMPTY_STACK_VALUE;
 	}
 
-	/**
-	 * This method checks if stack is full
-	 * @return This returns true if stack is full else false 
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.StackVector#isFull()
 	 */
+	@Override
 	public boolean isFull() {
 		return total == FULL_STACK_VALUE - 1;
 	}
 
-	/**
-	 * This method returns value at the top of the stack
-	 * @return This returns a top value from stack
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.StackVector#top()
 	 */
+	@Override
 	public int top() {
 		if (isEmpty())
 			return EMPTY_STACK_VALUE;
 		return items[total];
 	}
 
-	/**
-	 * This method extracts value from the stack
-	 * @return This returns extracted value from stack
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.StackVector#pop()
 	 */
+	@Override
 	public int pop() {
 		if (isEmpty())
 			return EMPTY_STACK_VALUE;
 		return items[total--];
 	}
 
-	/**
-	 * This method gets value of total
-	 * @return This returns value of total
+	/* (non-Javadoc)
+	 * @see edu.kis.vh.stacks.StackVector#getTotal()
 	 */
+	@Override
 	public int getTotal() {
 		return total;
 	}
