@@ -34,7 +34,7 @@ public class Stack {
 	 * @return This returns true if stack is full else false 
 	 */
 	public boolean isFull() {
-		return total == 11;
+		return total == FULL_STACK_VALUE - 1;
 	}
 
 	/**
