@@ -1,68 +1,46 @@
 package edu.kis.vh.stacks;
 
+import java.util.ArrayList;
+
 /**
  * @author Przemyslaw
  *
  */
 public class Stack {
 
-	private static final int EMPTY_STACK_VALUE = -1;
-	private static final int FULL_STACK_VALUE = 12;
+	private StackArray stackArray = new StackArray();
 
-	private final int[] items = new int[FULL_STACK_VALUE];
-	private int total = EMPTY_STACK_VALUE;
+	public Stack(StackArray stackArray) {
+		super();
+		this.stackArray = stackArray;
+	}
+	
+	public Stack() {
+		this.stackArray = new StackArray();
+	}
 
-	/**
-	 * This method adds new element to stack
-	 * @param i This is an element to be pushed on stack
-	 */
 	public void push(int i) {
-		if (!isFull())
-			items[++total] = i;
+		stackArray.push(i);
 	}
 
-	/**
-	 * This method checks if stack is empty
-	 * @return This returns true if stack is empty else false 
-	 */
 	public boolean isEmpty() {
-		return total == EMPTY_STACK_VALUE;
+		return stackArray.isEmpty();
 	}
 
-	/**
-	 * This method checks if stack is full
-	 * @return This returns true if stack is full else false 
-	 */
 	public boolean isFull() {
-		return total == FULL_STACK_VALUE - 1;
+		return stackArray.isFull();
 	}
 
-	/**
-	 * This method returns value at the top of the stack
-	 * @return This returns a top value from stack
-	 */
 	public int top() {
-		if (isEmpty())
-			return EMPTY_STACK_VALUE;
-		return items[total];
+		return stackArray.top();
 	}
 
-	/**
-	 * This method extracts value from the stack
-	 * @return This returns extracted value from stack
-	 */
 	public int pop() {
-		if (isEmpty())
-			return EMPTY_STACK_VALUE;
-		return items[total--];
+		return stackArray.pop();
 	}
 
-	/**
-	 * This method gets value of total
-	 * @return This returns value of total
-	 */
 	public int getTotal() {
-		return total;
+		return stackArray.getTotal();
 	}
-
+	
 }
