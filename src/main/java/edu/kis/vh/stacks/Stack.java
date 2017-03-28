@@ -8,7 +8,7 @@ import edu.kis.vh.stacks.list.StackList;
  */
 public class Stack {
 
-	private StackList stackList;
+	private StackVector stackList;
 
 	public Stack(StackList stackArray) {
 		super();

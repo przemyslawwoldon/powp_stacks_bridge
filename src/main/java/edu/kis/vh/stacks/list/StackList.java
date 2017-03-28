@@ -21,7 +21,7 @@ public class StackList implements StackVector{
 	private int i = EMPTY_STACK_VALUE;
 
 	@Override
-	public void push (int i) {
+	public void push(int i) {
 		this.i += 1;
 		if (last == null)
 			last = new Node(i);
