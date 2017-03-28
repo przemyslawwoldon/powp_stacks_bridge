@@ -1,4 +1,6 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.list;
+
+import edu.kis.vh.stacks.StackVector;
 
 public class StackArray implements StackVector {
 

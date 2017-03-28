@@ -44,3 +44,7 @@ public class Stack {
 	}
 	
 }
+
+//brak widocznych zmian w wykorzystaniu klasy Stack (StackDemo, Testach);
+//mozliwosc uzycia w klasie Stack klas 
+//implementujacych ten sam interfejs (StackVector) tj. klasy StackList lub klasy StackArray  
