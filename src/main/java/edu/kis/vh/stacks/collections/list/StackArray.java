@@ -2,11 +2,10 @@ package edu.kis.vh.stacks.collections.list;
 
 public class StackArray implements StackVector {
 
-	private static final int EMPTY_STACK_VALUE = -1;
 	private static final int FULL_STACK_VALUE = 12;
 
 	private final int[] items = new int[FULL_STACK_VALUE];
-	private int total = EMPTY_STACK_VALUE;
+	private int total = StackVector.EMPTY_STACK_VALUE;
 
 	/* (non-Javadoc)
 	 * @see edu.kis.vh.stacks.StackVector#push(int)
@@ -22,7 +21,7 @@ public class StackArray implements StackVector {
 	 */
 	@Override
 	public boolean isEmpty() {
-		return total == EMPTY_STACK_VALUE;
+		return total == StackVector.EMPTY_STACK_VALUE;
 	}
 
 	/* (non-Javadoc)
@@ -39,7 +38,7 @@ public class StackArray implements StackVector {
 	@Override
 	public int top() {
 		if (isEmpty())
-			return EMPTY_STACK_VALUE;
+			return StackVector.EMPTY_STACK_VALUE;
 		return items[total];
 	}
 
@@ -49,7 +48,7 @@ public class StackArray implements StackVector {
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY_STACK_VALUE;
+			return StackVector.EMPTY_STACK_VALUE;
 		return items[total--];
 	}
 

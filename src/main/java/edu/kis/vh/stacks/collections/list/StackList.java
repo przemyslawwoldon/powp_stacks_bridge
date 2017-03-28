@@ -2,8 +2,6 @@ package edu.kis.vh.stacks.collections.list;
 
 public class StackList implements StackVector{
 
-	private static final int EMPTY_STACK_VALUE = -1;
-	
 	private class Node {
 		
 		final int value;
@@ -16,7 +14,7 @@ public class StackList implements StackVector{
 	}	
 	
 	private Node last;
-	private int i = EMPTY_STACK_VALUE;
+	private int i = StackVector.EMPTY_STACK_VALUE;
 
 	@Override
 	public void push(int i) {
@@ -43,14 +41,14 @@ public class StackList implements StackVector{
 	@Override
 	public int top() {
 		if (isEmpty())
-			return EMPTY_STACK_VALUE;
+			return StackVector.EMPTY_STACK_VALUE;
 		return last.value;
 	}
 
 	@Override
 	public int pop() {
 		if (isEmpty())
-			return EMPTY_STACK_VALUE;
+			return StackVector.EMPTY_STACK_VALUE;
 		this.i -= 1;
 		int ret = last.value;
 		last = last.prev;
