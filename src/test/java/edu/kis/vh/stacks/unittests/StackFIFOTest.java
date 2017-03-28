@@ -10,7 +10,7 @@ public class StackFIFOTest {
 	@Test
 	public void testPop() {
 		StackFIFO stackFIFO = new StackFIFO();
-		final int EMPTY_STACK_VALUE = -1;
+		final int EMPTY_STACK_VALUE = 0;
 		int result = stackFIFO.pop();
 
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
