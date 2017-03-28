@@ -1,6 +1,4 @@
-package edu.kis.vh.stacks.list;
-
-import edu.kis.vh.stacks.StackVector;
+package edu.kis.vh.stacks.collections.list;
 
 public class StackList implements StackVector{
 

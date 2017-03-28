@@ -1,6 +1,7 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.list.StackList;
+import edu.kis.vh.stacks.collections.list.StackList;
+import edu.kis.vh.stacks.collections.list.StackVector;
 
 /**
  * @author Przemyslaw

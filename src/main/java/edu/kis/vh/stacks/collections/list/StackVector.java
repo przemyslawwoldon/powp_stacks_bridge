@@ -1,4 +1,4 @@
-package edu.kis.vh.stacks;
+package edu.kis.vh.stacks.collections.list;
 
 public interface StackVector {
 
