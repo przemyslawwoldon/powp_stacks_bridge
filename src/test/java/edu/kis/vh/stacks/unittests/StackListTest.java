@@ -8,7 +8,7 @@ import edu.kis.vh.stacks.collections.list.StackList;
 public class StackListTest {
 
 	@Test
-	public void testPushElement() {
+	public void testPush() {
 		StackList stackList = new StackList();
 		int testValue = 5;
 		stackList.push(testValue);
@@ -18,7 +18,7 @@ public class StackListTest {
 	}
 
 	@Test
-	public void testEmpty() {
+	public void testIsEmpty() {
 		StackList stackList = new StackList();
 		boolean result = stackList.isEmpty();
 
@@ -30,7 +30,7 @@ public class StackListTest {
 	}
 
 	@Test
-	public void testFull() {
+	public void testIsFull() {
 		StackList stackList = new StackList();
 		boolean resultFull;
 		for (int i = 0; i < 50; i += 1) {
@@ -45,7 +45,7 @@ public class StackListTest {
 	}
 
 	@Test
-	public void testPeek() {
+	public void testTop() {
 		StackList stackList = new StackList();
 		final int EMPTY_STACK_VALUE = 0;
 		int result = stackList.top();
@@ -78,4 +78,22 @@ public class StackListTest {
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
 
+	@Test
+	public void testGetTotal() {
+		StackList stackList = new StackList();
+		final int EMPTY_STACK_VALUE = 0;
+		int result = stackList.getTotal();
+
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		int pushValue = 4;
+		stackList.push(pushValue);
+		int testValue = 1;
+		result = stackList.getTotal();
+		
+		Assert.assertEquals(testValue, result);
+		stackList.pop();
+		result = stackList.getTotal();
+
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+	}
 }

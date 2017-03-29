@@ -77,5 +77,24 @@ public class StackTest {
 
 		Assert.assertEquals(EMPTY_STACK_VALUE, result);
 	}
+	
+	@Test
+	public void testGetTotal() {
+		Stack stackObj = new Stack();
+		final int EMPTY_STACK_VALUE = 0;
+		int result = stackObj.getTotal();
+
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+		int pushValue = 4;
+		stackObj.push(pushValue);
+		int testValue = 1;
+		result = stackObj.getTotal();
+		
+		Assert.assertEquals(testValue, result);
+		stackObj.pop();
+		result = stackObj.getTotal();
+
+		Assert.assertEquals(EMPTY_STACK_VALUE, result);
+	}
 
 }
