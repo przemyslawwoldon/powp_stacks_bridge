@@ -11,9 +11,9 @@ public class Stack {
 
 	private StackVector stackVector;
 
-	public Stack(StackList stackList) {
+	public Stack(StackVector stackVector) {
 		super();
-		this.stackVector = stackList;
+		this.stackVector = stackVector;
 	}
 	
 	public Stack() {

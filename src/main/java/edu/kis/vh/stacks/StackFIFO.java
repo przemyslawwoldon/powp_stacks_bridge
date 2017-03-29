@@ -1,6 +1,7 @@
 package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.collections.list.StackList;
+import edu.kis.vh.stacks.collections.list.StackVector;
 
 public class StackFIFO extends Stack {
 
@@ -11,8 +12,8 @@ public class StackFIFO extends Stack {
 		// TODO Auto-generated constructor stub
 	}
 
-	public StackFIFO(StackList stackList) {
-		super(stackList);
+	public StackFIFO(StackVector stackVector) {
+		super(stackVector);
 		// TODO Auto-generated constructor stub
 	}
 

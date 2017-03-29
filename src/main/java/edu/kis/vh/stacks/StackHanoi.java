@@ -1,6 +1,7 @@
 package edu.kis.vh.stacks;
 
 import edu.kis.vh.stacks.collections.list.StackList;
+import edu.kis.vh.stacks.collections.list.StackVector;
 
 public class StackHanoi extends Stack {
 
@@ -11,8 +12,8 @@ public class StackHanoi extends Stack {
 		// TODO Auto-generated constructor stub
 	}
 
-	public StackHanoi(StackList stackList) {
-		super(stackList);
+	public StackHanoi(StackVector stackVector) {
+		super(stackVector);
 		// TODO Auto-generated constructor stub
 	}
 
