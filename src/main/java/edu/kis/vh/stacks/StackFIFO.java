@@ -4,7 +4,7 @@ import edu.kis.vh.stacks.collections.list.StackList;
 
 public class StackFIFO extends Stack {
 
-	private final Stack temp = new Stack();
+	private final StackList temp = new StackList();
 
 	public StackFIFO() {
 		super();
@@ -30,3 +30,7 @@ public class StackFIFO extends Stack {
 	}
 
 }
+
+//StackList wydaje sie lepszym wyborem, 
+//poniewaz nie ustalamy z gory rozmiaru stosu dzieki czemu nie jestesmy ograniczeni rozmiarem,
+//zasoby sa przydzielane dynamicznie  
