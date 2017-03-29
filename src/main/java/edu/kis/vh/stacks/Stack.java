@@ -9,39 +9,39 @@ import edu.kis.vh.stacks.collections.list.StackVector;
  */
 public class Stack {
 
-	private StackVector stackList;
+	private StackVector stackVector;
 
-	public Stack(StackList stackArray) {
+	public Stack(StackList stackList) {
 		super();
-		this.stackList = stackArray;
+		this.stackVector = stackList;
 	}
 	
 	public Stack() {
-		this.stackList = new StackList();
+		this.stackVector = new StackList();
 	}
 
 	public void push(int i) {
-		stackList.push(i);
+		stackVector.push(i);
 	}
 
 	public boolean isEmpty() {
-		return stackList.isEmpty();
+		return stackVector.isEmpty();
 	}
 
 	public boolean isFull() {
-		return stackList.isFull();
+		return stackVector.isFull();
 	}
 
 	public int top() {
-		return stackList.top();
+		return stackVector.top();
 	}
 
 	public int pop() {
-		return stackList.pop();
+		return stackVector.pop();
 	}
 	
 	public int getTotal() {
-		return stackList.getTotal();
+		return stackVector.getTotal();
 	}
 	
 }

@@ -11,8 +11,8 @@ public class StackFIFO extends Stack {
 		// TODO Auto-generated constructor stub
 	}
 
-	public StackFIFO(StackList stackArray) {
-		super(stackArray);
+	public StackFIFO(StackList stackList) {
+		super(stackList);
 		// TODO Auto-generated constructor stub
 	}
 
@@ -32,5 +32,5 @@ public class StackFIFO extends Stack {
 }
 
 //StackList wydaje sie lepszym wyborem, 
-//poniewaz nie ustalamy z gory rozmiaru stosu dzieki czemu nie jestesmy ograniczeni rozmiarem,
+//poniewaz nie ustalamy z gory rozmiaru stosu dzieki czemu nie jestesmy nim ograniczeni,
 //zasoby sa przydzielane dynamicznie  

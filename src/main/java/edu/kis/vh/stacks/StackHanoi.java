@@ -11,8 +11,8 @@ public class StackHanoi extends Stack {
 		// TODO Auto-generated constructor stub
 	}
 
-	public StackHanoi(StackList stackArray) {
-		super(stackArray);
+	public StackHanoi(StackList stackList) {
+		super(stackList);
 		// TODO Auto-generated constructor stub
 	}
 

@@ -28,22 +28,22 @@ public class StackListTest {
 
 		Assert.assertEquals(false, result);
 	}
-/*
+
 	@Test
 	public void testFull() {
 		StackList stackList = new StackList();
 		boolean resultFull;
 		for (int i = 0; i < 50; i += 1) {
-			resultFull = stackList.full();
+			resultFull = stackList.isFull();
 			
 			Assert.assertEquals(false, resultFull);
-			stackList.pushElement(i);
+			stackList.push(i);
 		}
-		resultFull = stackList.full();
+		resultFull = stackList.isFull();
 		
 		Assert.assertEquals(false, resultFull);
 	}
-*/
+
 	@Test
 	public void testPeek() {
 		StackList stackList = new StackList();
