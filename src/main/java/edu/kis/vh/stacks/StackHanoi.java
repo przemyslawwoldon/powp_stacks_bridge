@@ -1,6 +1,5 @@
 package edu.kis.vh.stacks;
 
-import edu.kis.vh.stacks.collections.list.StackList;
 import edu.kis.vh.stacks.collections.list.StackVector;
 
 public class StackHanoi extends Stack {
